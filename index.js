@@ -7,7 +7,8 @@ class RomanConverter {
     else if (arabNumber == 5) return "V";
     else if(arabNumber > 5 && arabNumber < 9) return "V" + "I".repeat(arabNumber - 5);
     else if (arabNumber == 9) return "IX";
-    return "X";
+    else if (arabNumber == 10) return "X"
+    return "XI";
   }
 }
 
