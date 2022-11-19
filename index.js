@@ -1,0 +1,3 @@
+class RomanConverter {
+  constructor() {}
+}
