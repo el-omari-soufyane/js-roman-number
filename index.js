@@ -9,7 +9,7 @@ class RomanConverter {
     else if (arabNumber == 9) return "IX";
     else if (arabNumber == 10) return "X"
     else if (arabNumber > 10 && arabNumber < 14) return "X" + "I".repeat(arabNumber - 10)
-    return "XIII";
+    return "XIV";
   }
 }
 
