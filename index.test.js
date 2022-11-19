@@ -21,6 +21,8 @@ test.each([
   { number: 16, expected: "XVI" },
   { number: 17, expected: "XVII" },
   { number: 18, expected: "XVIII" },
+  { number: 19, expected: "XIX" },
+  { number: 20, expected: "XX" },
 
 ])(
   "Arab Number : $number => Roman Number : $expected",
