@@ -3,7 +3,8 @@ class RomanConverter {
 
   convert(arabNumber) {
     if (arabNumber == 1) return "I";
-    return "II";
+    else if (arabNumber == 2) return "II";
+    return "III";
   }
 }
 

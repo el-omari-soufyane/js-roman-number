@@ -5,6 +5,7 @@ const RomanConverter = require("./index");
 test.each([
   { number: 1, expected: "I" },
   { number: 2, expected: "II" },
+  { number: 3, expected: "III" },
 ])(
   "Arab Number : $number => Roman Number : $expected",
   ({ number, expected }) => {
