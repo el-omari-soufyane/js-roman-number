@@ -5,3 +5,5 @@ class RomanConverter {
     return "I";
   }
 }
+
+module.exports = RomanConverter;
