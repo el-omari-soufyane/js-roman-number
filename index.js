@@ -13,7 +13,8 @@ class RomanConverter {
     else if (arabNumber == 15) return "XV";
     else if(arabNumber > 15 && arabNumber <19) return "XV" + "I".repeat(arabNumber - 15);
     else if (arabNumber == 19) return "XIX";
-    return "XX";
+    else if (arabNumber == 20) return "XX";
+    return "XXI";
   }
 }
 
