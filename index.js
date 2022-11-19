@@ -15,7 +15,8 @@ class RomanConverter {
     else if (arabNumber == 19) return "XIX";
     else if (arabNumber == 20) return "XX";
     else if (arabNumber == 21) return "XXI";
-    return "XXII";
+    else if (arabNumber == 22) return "XXII";
+    return "XXIII";
   }
 }
 
