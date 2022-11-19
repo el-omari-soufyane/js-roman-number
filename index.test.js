@@ -27,6 +27,7 @@ test.each([
   { number: 22, expected: "XXII" },
   { number: 23, expected: "XXIII" },
   { number: 24, expected: "XXIV" },
+  { number: 25, expected: "XXV" },
 
 
 ])(
