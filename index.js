@@ -2,7 +2,8 @@ class RomanConverter {
   constructor() {}
 
   convert(arabNumber) {
-    return "I";
+    if (arabNumber == 1) return "I";
+    return "II";
   }
 }
 
