@@ -3,7 +3,8 @@ class RomanConverter {
 
   convert(arabNumber) {
     if (arabNumber < 4) return "I".repeat(arabNumber);
-    return "IV";
+    else if (arabNumber == 4) return "IV";
+    return "V";
   }
 }
 
