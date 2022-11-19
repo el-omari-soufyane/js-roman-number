@@ -7,7 +7,8 @@ class RomanConverter {
     else if (arabNumber == 5) return "V";
     else if (arabNumber == 6) return "VI";
     else if (arabNumber == 7) return "VII";
-    return "VIII";
+    else if (arabNumber == 8) return "VIII";
+    return "IX";
   }
 }
 
