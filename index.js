@@ -11,15 +11,13 @@ class RomanConverter {
 
   convert(arabNumber) {
     if (arabNumber < 4) return this.addUnites(arabNumber);
-    else if (arabNumber == 4) return "IV";
-    else if (arabNumber == 5) return "V";
-    else if (arabNumber > 5 && arabNumber < 9) return this.addUnites(arabNumber - 5, "V");
-    else if (arabNumber == 9) return "IX";
+    else if (arabNumber == 4) return this.addUnites(1, "V", true);
+    else if (arabNumber > 4 && arabNumber < 9) return this.addUnites(arabNumber - 5, "V");
+    else if (arabNumber == 9) return this.addUnites(1, "X", true);
     else if (arabNumber == 10) return "X"
     else if (arabNumber > 10 && arabNumber < 14) return this.addUnites(arabNumber - 10, "X")
     else if (arabNumber == 14) return "XIV"
-    else if (arabNumber == 15) return "XV";
-    else if (arabNumber > 15 && arabNumber < 19) return this.addUnites(arabNumber - 15, "XV");
+    else if (arabNumber > 14 && arabNumber < 19) return this.addUnites(arabNumber - 15, "XV");
     else if (arabNumber == 19) return "XIX";
     else if (arabNumber == 20) return "XX";
     else if (arabNumber > 20 && arabNumber < 24) return this.addUnites(arabNumber - 20, "XX");
