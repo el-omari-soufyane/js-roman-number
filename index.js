@@ -1,5 +1,10 @@
 class RomanConverter {
   constructor() { }
+  
+  /**
+   * @param {number} arabNumber
+   */
+  addUnites() {}
 
   convert(arabNumber) {
     if (arabNumber < 4) return "I".repeat(arabNumber);
