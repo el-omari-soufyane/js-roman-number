@@ -4,29 +4,27 @@ class RomanConverter {
   /**
    * @param {number} arabNumber
    */
-  addUnites(arabNumber, unit = "", preNumber = false) {
-    const repeated = "I".repeat(arabNumber);
-    return preNumber ? repeated + unit : unit + repeated;
+  addUnites(arabNumber, nbOfTen = 0, unit = "", postNumber = false) {
+    const repeated = "I".repeat(Math.abs(nbOfTen - arabNumber));
+    return postNumber ? unit + repeated : repeated + unit;
   }
 
   convert(arabNumber) {
-    if (arabNumber < 4) return this.addUnites(arabNumber);
-    else if (arabNumber == 4) return "IV";
-    else if (arabNumber == 5) return "V";
-    else if (arabNumber > 5 && arabNumber < 9) return this.addUnites(arabNumber - 5, "V");
-    else if (arabNumber == 9) return "IX";
-    else if (arabNumber == 10) return "X"
-    else if (arabNumber > 10 && arabNumber < 14) return this.addUnites(arabNumber - 10, "X")
-    else if (arabNumber == 14) return "XIV"
-    else if (arabNumber == 15) return "XV";
-    else if (arabNumber > 15 && arabNumber < 19) return this.addUnites(arabNumber - 15, "XV");
-    else if (arabNumber == 19) return "XIX";
-    else if (arabNumber == 20) return "XX";
-    else if (arabNumber > 20 && arabNumber < 24) return this.addUnites(arabNumber - 20, "XX");
-    else if (arabNumber == 24) return "XXIV";
-    else if (arabNumber > 24 && arabNumber < 29) return this.addUnites(arabNumber - 25, "XXV");
-    else if (arabNumber == 29) return "XXIX";
-    return "XXX";
+    let result = "";
+    const nbOfTen = arabNumber / 10;
+    const reminder = arabNumber % 10;
+    result += "X".repeat(nbOfTen);
+
+    if (reminder < 4) result += this.addUnites(reminder);
+    if (reminder == 4)
+      result += this.addUnites(arabNumber, nbOfTen * 10 + 1, "V");
+    if (reminder > 4 && reminder <= 8)
+      result += this.addUnites(reminder, 5, "V", true);
+    if (reminder == 9)
+      result += this.addUnites(arabNumber, nbOfTen * 10 + 1, "X");
+
+    if (result != "") return result;
+    return "";
   }
 }
 
